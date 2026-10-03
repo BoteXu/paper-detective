@@ -1,0 +1,4 @@
+interface:
+  display_name: "论文侦探 Paper Detective"
+  short_description: "追溯科学结论的原始证据，核对研究对象、实验类型和证据缺口"
+  default_prompt: "使用 $paper-detective 核验这句科学结论；如提供来源论文，请追溯引用并展示原始证据与适用边界。"

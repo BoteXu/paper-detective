@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "simulation": true,
+  "mode": "claim-check",
+  "input_claim": "药物 A 能降低患者心衰死亡率。",
+  "as_of": "2026-10-03",
+  "root_source_id": null,
+  "claims": [
+    {
+      "id": "C1",
+      "text": "A 降低患者心衰死亡率",
+      "conclusion": "提供的模拟材料没有直接检验患者死亡率；仅存在细胞模型的间接结果。",
+      "gaps": ["没有患者、死亡率结局或临床随访。"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "模拟材料：A 与小鼠心肌细胞存活",
+      "identifier": "synthetic:S1",
+      "url": null,
+      "source_type": "original_research",
+      "identity_status": "provided_material",
+      "inspection": "complete_materials_inspected",
+      "status_check": "模拟材料，无真实论文身份、版本或撤稿状态可验证。"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E1",
+      "claim_id": "C1",
+      "source_id": "S1",
+      "relation": "indirect",
+      "location": "模拟材料：Results paragraph 1",
+      "result": "A 处理后细胞存活率上升；材料未给出效应量或区间。",
+      "rationale": "细胞存活结果与临床死亡率主张的对象和结局不同，不能直接外推。",
+      "context": {
+        "subject": "培养的心肌细胞",
+        "species": "小鼠",
+        "model": "体外细胞模型",
+        "assay": "细胞存活率测量",
+        "biological_unit": "独立细胞分离；视野为嵌套测量",
+        "sample_size": "3 次独立分离，每次 6 个视野；不是 18 个独立生物学重复",
+        "contrast": "A 处理与载体对照",
+        "outcome": "细胞存活率",
+        "uncertainty": "not_reported"
+      }
+    }
+  ],
+  "citation_edges": [],
+  "search_log": [
+    {
+      "provider": "离线模拟材料",
+      "query": "仅检查提供的模拟文本；没有外部检索",
+      "status": "not_run",
+      "notes": "未执行真实文献检索；不声称引用追溯或检索覆盖。"
+    }
+  ],
+  "limitations": [
+    "这是格式与边界演示，不是真实科学核验。",
+    "没有真实文献检索、患者数据或身份验证。"
+  ]
+}
